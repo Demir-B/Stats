@@ -42,6 +42,10 @@ def black_scholes(S, K, T, r, sigma, option_type="call"):
     return price
 
 if __name__ == "__main__":
+    xw.Book("Black_Scholes.xlsm").set_mock_caller()
+    wb = xw.Book.caller()
+    sheet = wb.sheets[0]
+
     S = 100     # Current stock price
     K = 110     # Strike price
     T = 1       # Time to maturity (1 year)

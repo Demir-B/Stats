@@ -40,6 +40,10 @@ def monte_carlo_option_pricing(S, K, T, r, sigma, num_simulations=100000, option
     return price
 
 if __name__ == "__main__":
+    xw.Book("Monte_Carlo.xlsm").set_mock_caller()
+    wb = xw.Book.caller()
+    sheet = wb.sheets[0]
+
     S = 100      # Current stock price
     K = 110      # Strike price
     T = 1        # Time to maturity (1 year)
